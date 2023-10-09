@@ -1,0 +1,25 @@
+public class GenericArray<T>  {
+	private T[] myArray;
+	private int size;
+	
+  public GenericArray(int size) {
+	  myArray = (T[]) new Object[size];
+	  this.size = size;
+  }
+  public T get(int index) {
+	  return myArray[index];
+  }
+  public void set(int index, T value) {
+	  myArray[index] = value;
+	  value = myArray[index];
+  }
+  public  int size() {
+	  return size;
+  }
+  public boolean isEmpty() {
+	  if (myArray.length == 0) {
+		  return true;
+	  }
+	  return false;
+  }
+}
